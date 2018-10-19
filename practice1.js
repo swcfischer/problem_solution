@@ -9,9 +9,10 @@ function teamComp(str) {
     composition[student] += 1
   })
 
-  const numOfTeams = TEAM.map(type => composition[type])
+  const numOfTeams = TEAM.map(type => composition[type] ? composition[type] : 0)
   return numOfTeams.sort()[0]
 }
 
 
 console.log(teamComp('pmbsepasdfasdfmbse'));
+console.log(teamComp('asd'));
